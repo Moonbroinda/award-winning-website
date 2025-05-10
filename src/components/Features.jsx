@@ -102,52 +102,75 @@ const Features = () => (
   <section className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
-        <p className="font-circular-web text-lg text-blue-50">
-          Into the Metagame Layer
+        <p className="font-circular-web text-4xl text-blue-50 mb-5">
+          Танхимын сургалт
         </p>
         <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          Immerse yourself in a rich and ever-expanding universe where a vibrant
-          array of products converge into an interconnected overlay experience
-          on your world.
+           - <b>Нэгдүгээр шатны сургалт:</b> HTML, CSS, Tailwind, Bootstrap
+          ашиглан вэб хөгжүүлэлтийн үндэс
+          <br /> - <b>Хоёрдугаар шатны сургалт:</b> JavaScript, DOM, үндсэн интерактив боломжуудаар дамжуулан хөгжүүлэлт хийх 
+
+          <br/> - <b>Гуравдугаар шатны сургалт:</b> ReactJS, API холболт, финал төсөл
         </p>
       </div>
 
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
-        <BentoCard
-          src="videos/feature-1.mp4"
-          title={
-            <>
-              radia<b>n</b>t
-            </>
-          }
-          description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
-          isComingSoon
-        />
-      </BentoTilt>
+  <BentoCard
+    src="videos/feature-1.mp4"
+    title={
+      <div className="relative z-10">
+        <span className="bg-black/80 p-2 rounded-md text-white block mb-2">
+          fro<b>n</b>t end
+        </span>
+      </div>
+    }
+    description={
+      <div className="relative z-10">
+        <span className="bg-black/80 p-2 rounded-md text-white block">
+          Шаталсан сургалт тус бүрээр 1 сарын хугацаатайгаар нийт 3 сар үргэлжилнэ.
+        </span>
+      </div>
+    }
+    isComingSoon
+  />
+</BentoTilt>
+
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
-          <BentoCard
-            src="videos/feature-2.mp4"
-            title={
-              <>
-                zig<b>m</b>a
-              </>
-            }
-            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
-            isComingSoon
-          />
-        </BentoTilt>
+  <BentoCard
+    src="videos/feature-2.mp4"
+    title={
+      <div className="relative z-10">
+        <span className="bg-black/80 p-2 rounded-md text-white block mb-2">
+          Java<b>S</b>cript, DOM
+        </span>
+      </div>
+    }
+    description={
+      <div className="relative z-10">
+        <span className="bg-black/80 p-2 rounded-md text-white block">
+          JavaScript-ийн үндсэн ойлголтууд
+          <br/>DOM (Document Object Model)-той ажиллах
+          <br/>Суралцагчдад вэб хуудсыг илүү амьд, хэрэглэгчидтэй харилцдаг болгох чадвар эзэмшинэ.
+        </span>
+      </div>
+    }
+    isComingSoon
+  />
+</BentoTilt>
 
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
             src="videos/feature-3.mp4"
             title={
               <>
-                n<b>e</b>xus
+                React<b>J</b>S, API
               </>
             }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+            description="ReactJS-ийн үндсэн ойлголтууд,
+            API-тай холбогдож мэдээлэл авах, илгээх, 
+            өөрийн вэб апп хөгжүүлж, API ашиглан бодит өгөгдөлтэй ажиллах."
             isComingSoon
           />
         </BentoTilt>
@@ -157,10 +180,10 @@ const Features = () => (
             src="videos/feature-4.mp4"
             title={
               <>
-                az<b>u</b>l
+                Des<b>i</b>gn
               </>
             }
-            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            description="Вэбсайтыг бүх төрлийн төхөөрөмжид тохирох байдлаар зохион бүтээх аргачлал."
             isComingSoon
           />
         </BentoTilt>
