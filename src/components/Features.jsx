@@ -90,7 +90,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
               }}
             />
             <TiLocationArrow className="relative z-20" />
-            <p className="relative z-20">coming soon</p>
+            <p className="relative z-20">Дэлгэрэнгүй</p>
           </div>
         )}
       </div>
@@ -189,14 +189,14 @@ const Features = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-          <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
-            <h1 className="bento-title special-font max-w-64 text-black">
-              M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
-            </h1>
+  <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
+    <h1 className="bento-title special-font max-w-64 text-black text-lg md:text-xl lg:text-5xl">
+      <b>X</b>иймэл оюун ухаан хосолсон сургалт
+    </h1>
 
-            <TiLocationArrow className="m-5 scale-[5] self-end" />
-          </div>
-        </BentoTilt>
+    <TiLocationArrow className="m-5 w-8 h-8 md:w-12 md:h-12 self-end text-black" />
+  </div>
+</BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
           <video
