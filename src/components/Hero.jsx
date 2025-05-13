@@ -155,11 +155,13 @@ const Hero = () => {
             </p>
 
             <Button
-              id="watch-trailer"
-              title="Дэлгэрэнгүй мэдээлэл"
-              leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
-            />
+  id="watch-trailer"
+  title="Дэлгэрэнгүй мэдээлэл"
+  leftIcon={<TiLocationArrow />}
+  containerClass="bg-yellow-300 flex-center gap-1"
+  to="/tuhai"
+/>
+
           </div>
         </div>
       </div>

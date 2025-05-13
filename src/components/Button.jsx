@@ -1,14 +1,9 @@
+import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
-  return (
-    <button
-      id={id}
-      className={clsx(
-        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black",
-        containerClass
-      )}
-    >
+const Button = ({ id, title, rightIcon, leftIcon, containerClass, to, onClick }) => {
+  const buttonContent = (
+    <>
       {leftIcon}
 
       <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
@@ -21,6 +16,25 @@ const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
       </span>
 
       {rightIcon}
+    </>
+  );
+
+  const baseClasses = clsx(
+    "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black",
+    containerClass
+  );
+
+  if (to) {
+    return (
+      <Link id={id} to={to} className={baseClasses} onClick={onClick}>
+        {buttonContent}
+      </Link>
+    );
+  }
+
+  return (
+    <button id={id} className={baseClasses} onClick={onClick}>
+      {buttonContent}
     </button>
   );
 };

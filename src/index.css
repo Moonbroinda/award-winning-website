@@ -271,3 +271,9 @@ body {
     opacity: 0.8;
   }
 }
+:root {
+  --font-sora: 'Sora', sans-serif;
+  --font-grotesk: 'Space Grotesk', sans-serif;
+  --font-code: 'Fira Code', monospace;
+}
+
