@@ -101,18 +101,52 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 const Features = () => (
   <section className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32">
-        <p className="font-circular-web text-4xl text-blue-50 mb-5">
-          Танхимын сургалт
-        </p>
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-           - <b>Нэгдүгээр шатны сургалт:</b> HTML, CSS, Tailwind, Bootstrap
-          ашиглан вэб хөгжүүлэлтийн үндэс
-          <br /> - <b>Хоёрдугаар шатны сургалт:</b> JavaScript, DOM, үндсэн интерактив боломжуудаар дамжуулан хөгжүүлэлт хийх 
+      <div className="px-5 py-32 flex flex-col-reverse md:flex-row items-center md:items-start gap-10">
+  {/* Left: Text */}
+  <div className="w-full md:w-1/2">
+  <p className="font-circular-web text-4xl text-blue-50 mb-5">
+    Танхимын сургалт
+  </p>
+  <div className="font-circular-web text-lg text-blue-50 opacity-50 space-y-4">
 
-          <br/> - <b>Гуравдугаар шатны сургалт:</b> ReactJS, API холболт, финал төсөл
-        </p>
-      </div>
+    <div>
+      <p className="font-semibold text-blue-50">🔰 Нэгдүгээр шат – Вэб хөгжүүлэлтийн үндэс:</p>
+      <p>
+        Энэ шатанд та HTML, CSS, TailwindCSS, Bootstrap зэрэг технологийн тусламжтайгаар вэб хуудсыг хэрхэн бүтээхийг
+        суралцана. Энгийн бүтэцтэй вэбсайт хийх, layout зохиох, өнгө загвар тааруулах зэрэг UI талын мэдлэгийг бодит жишээн дээр суурилж эзэмшинэ.
+      </p>
+    </div>
+
+    <div>
+      <p className="font-semibold text-blue-50">⚙️ Хоёрдугаар шат – Интерактив хөгжүүлэлт:</p>
+      <p>
+        JavaScript болон DOM (Document Object Model)-ийг ашиглан вэб хуудсыг хэрхэн динамик, хэрэглэгчтэй харилцдаг болгох талаар суралцана.
+        Бодит амьдрал дээр хэрэглэгдэх жижиг төслүүд дээр ажиллаж, form validation, event handling зэрэг чухал ойлголтыг эзэмшинэ.
+      </p>
+    </div>
+
+    <div>
+      <p className="font-semibold text-blue-50">🚀 Гуравдугаар шат – Орчин үеийн вэб технологи:</p>
+      <p>
+        ReactJS ашиглан нэг хуудсан дээр олон component-оос бүрдэх дэвшилтэт вэб аппликейшн хөгжүүлэхийг сурна.
+        API холболт хийх, хэрэглэгчийн мэдээлэл авах, бүртгэх зэрэг функцуудыг хэрэгжүүлэх бөгөөд эцэст нь өөрийн финал төсөл дээр ажиллана.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+  {/* Right: Image */}
+  <div className="w-full md:w-1/2">
+    <img
+      src="/img/balance.jpg" // replace with your image path
+      alt="Balance picture"
+      className="rounded-lg shadow-lg w-full h-auto object-cover"
+    />
+  </div>
+</div>
+
 
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
   <BentoCard
@@ -189,12 +223,14 @@ const Features = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-  <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
-    <h1 className="bento-title special-font max-w-64 text-black text-lg md:text-xl lg:text-5xl">
-      <b>X</b>иймэл оюун ухаан хосолсон сургалт
+  <div className="flex size-full flex-col justify-between bg-violet-300 p-4 md:p-5 rounded-xl shadow-md overflow-hidden">
+    <h1 className="special-font text-black leading-tight text-[clamp(1.25rem,2.5vw,2.5rem)] px-2 py-1 md:px-3 md:py-2 break-words whitespace-normal">
+      <span className="inline-block">
+        <b>X</b>иймэл оюун ухаан<br className="hidden sm:block"/> 
+        хосолсон сургалт
+      </span>
     </h1>
-
-    <TiLocationArrow className="m-5 w-8 h-8 md:w-12 md:h-12 self-end text-black" />
+    <TiLocationArrow className="m-3 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 self-end text-black" />
   </div>
 </BentoTilt>
 

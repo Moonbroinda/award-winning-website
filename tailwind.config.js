@@ -146,7 +146,9 @@ export default {
         ".button": {
           "@apply font-code text-xs font-bold uppercase tracking-wider": {},
         },
+        
       });
+      
 
       // Extra utilities
       addUtilities({

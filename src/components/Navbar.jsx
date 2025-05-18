@@ -3,14 +3,13 @@ import clsx from "clsx";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
-import { TiLocationArrow } from "react-icons/ti";
+// import { TiLocationArrow } from "react-icons/ti";
+import { FiMenu, FiX } from "react-icons/fi"; // icons for menu toggle
 
 import Button from "./Button";
 
-// Your nav items
 const navItems = ["Нүүр", "Веб", "Контент", "AI", "Бидний тухай", "Холбоо барих"];
 
-// 🆕 Add route map here (JUST BELOW navItems)
 const routeMap = {
   Нүүр: "/",
   Веб: "/Web",
@@ -23,6 +22,7 @@ const routeMap = {
 const NavBar = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);  // NEW: mobile menu state
   const audioElementRef = useRef(null);
   const navContainerRef = useRef(null);
 
@@ -33,6 +33,10 @@ const NavBar = () => {
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
     setIsIndicatorActive((prev) => !prev);
+  };
+
+  const toggleMobileNav = () => {
+    setIsMobileNavOpen(prev => !prev);
   };
 
   useEffect(() => {
@@ -72,35 +76,37 @@ const NavBar = () => {
       className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex size-full items-center justify-between p-4">
+        <nav className="flex items-center justify-between p-4">
           {/* Logo and Product button */}
           <div className="flex items-center gap-7">
-              <Link to="/">
-    <img src="/img/logo.jpg" alt="logo" className="w-10 cursor-pointer" />
-  </Link>
+            <Link to="/">
+              <img src="/img/logo.jpg" alt="logo" className="w-10 cursor-pointer" />
+            </Link>
 
-            <Button
-              id="product-button"
-              title="Бүртгүүлэх"
-              rightIcon={<TiLocationArrow />}
-              containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-            />
+            {/* Product button only visible on md+ */}
+            <Link to="/Holboo" className="hidden md:flex">
+              <Button
+                id="product-button"
+                title="Бүртгүүлэх"
+                // rightIcon={<TiLocationArrow />}
+                containerClass="bg-blue-50 items-center justify-center gap-1"
+              />
+            </Link>
           </div>
 
-          {/* Navigation Links and Audio Button */}
-          <div className="flex h-full items-center">
-            <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={routeMap[item]}   // ✅ Use routeMap here
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center space-x-6">
+            {navItems.map((item, index) => (
+              <Link
+                key={index}
+                to={routeMap[item]}
+                className="nav-hover-btn"
+              >
+                {item}
+              </Link>
+            ))}
 
+            {/* Audio play button */}
             <button
               onClick={toggleAudioIndicator}
               className="ml-10 flex items-center space-x-0.5"
@@ -124,7 +130,60 @@ const NavBar = () => {
               ))}
             </button>
           </div>
+
+          {/* Mobile: Menu Icon and Audio Button */}
+          <div className="flex items-center md:hidden space-x-4">
+            {/* Audio button */}
+            <button
+              onClick={toggleAudioIndicator}
+              className="flex items-center space-x-0.5"
+              aria-label="Toggle audio"
+            >
+              <audio
+                ref={audioElementRef}
+                className="hidden"
+                src="/audio/loop.mp3"
+                loop
+              />
+              {[1, 2, 3, 4].map((bar) => (
+                <div
+                  key={bar}
+                  className={clsx("indicator-line", {
+                    active: isIndicatorActive,
+                  })}
+                  style={{
+                    animationDelay: `${bar * 0.1}s`,
+                  }}
+                />
+              ))}
+            </button>
+
+            {/* Menu toggle icon */}
+            <button
+              onClick={toggleMobileNav}
+              className="text-2xl text-white"
+              aria-label="Toggle menu"
+            >
+              {isMobileNavOpen ? <FiX /> : <FiMenu />}
+            </button>
+          </div>
         </nav>
+
+        {/* Mobile Navigation menu dropdown */}
+        {isMobileNavOpen && (
+          <div className="md:hidden bg-white shadow-md rounded-md mt-2 p-4 absolute left-0 right-0 z-50">
+            {navItems.map((item, index) => (
+              <Link
+                key={index}
+                to={routeMap[item]}
+                className="block py-2 border-b last:border-b-0"
+                onClick={() => setIsMobileNavOpen(false)} // close menu on click
+              >
+                {item}
+              </Link>
+            ))}
+          </div>
+        )}
       </header>
     </div>
   );

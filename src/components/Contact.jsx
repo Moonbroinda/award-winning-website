@@ -1,5 +1,6 @@
 import AnimatedTitle from "./AnimatedTitle";
 import Button from "./Button";
+import { Link } from 'react-router-dom';
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
@@ -38,12 +39,15 @@ const Contact = () => {
     Видеограф, График дизайн, Дижитал маркетинг
   </p>
 
-  <AnimatedTitle
-    title="Дүрслэл,<br /> Дизайн, <br /> Дижитал маркетинг"
-    className="special-font w-full font-zentry font-black leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-[5rem]"
-  />
+    <AnimatedTitle
+      title="Дүрслэл,<br /> Дизайн, <br /> Дижитал маркетинг"
+      className="special-font w-full font-zentry font-black leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-[5rem]"
+    />
 
+
+<Link to="/holboo">
   <Button title="Холбоо барих" containerClass="mt-10 cursor-pointer" />
+  </Link>
 </div>
 
       </div>

@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import {Timeline} from '../components/Timeline';
+import { contentCreatorStages } from "../constants";
 
 
 const Content = () => {
@@ -59,6 +61,7 @@ const Content = () => {
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
         БҮТЭЭГЧ 
       </h1>
+      <Timeline data={contentCreatorStages}/>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { useRef } from "react";
 
 import Button from "./Button";
 import AnimatedTitle from "./AnimatedTitle";
+import { Link } from 'react-router-dom';
 
 const FloatingImage = () => {
   const frameRef = useRef(null);
@@ -58,7 +59,7 @@ const FloatingImage = () => {
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
 
-          <div className="story-img-container">
+          <div className="story-img-container -mb-40 md:mb-0">
             <div className="story-img-mask">
               <div className="story-img-content">
                 <img
@@ -103,20 +104,22 @@ const FloatingImage = () => {
           </div>
         </div>
 
-        <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
-          <div className="flex h-full w-fit flex-col items-center md:items-start">
-            <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-              Видеограф, график дизайн, дижитал маркетингийн чиглэлээр контент үйлдвэрлэх, хөгжүүлэх,
-              засварлах, найруулах, бүтэц зохион байгуулах ур чадвар эзэмшинэ.
-            </p>
+        <div className="mt-1 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
+  <div className="flex h-full w-fit flex-col items-center md:items-start px-4">
+    <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
+      Видеограф, график дизайн, дижитал маркетингийн чиглэлээр контент үйлдвэрлэх, хөгжүүлэх,
+      засварлах, найруулах, бүтэц зохион байгуулах ур чадвар эзэмшинэ.
+    </p>
 
-            <Button
-              id="realm-btn"
-              title="Дэлгэрэнгүй үзэх"
-              containerClass="mt-5"
-            />
-          </div>
-        </div>
+    <Link to="/Content">
+      <Button
+        id="realm-btn"
+        title="Дэлгэрэнгүй үзэх"
+        containerClass="mt-5"
+      />
+    </Link>
+  </div>
+</div>
       </div>
     </div>
   );

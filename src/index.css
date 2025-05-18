@@ -62,11 +62,22 @@ body {
   .mask-clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+  
 
-  .special-font b {
-    font-family: "Zentry";
-    font-feature-settings: "ss01" on;
-  }
+ .special-font {
+  font-family: "Zentry", "Arial Unicode MS", sans-serif;
+  font-feature-settings: "ss01" on;
+  word-break: normal; /* Add this */
+  hyphens: auto; /* Add this for better word breaking */
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  word-spacing: -0.05em;
+}
+
+.special-font b {
+  font-family: inherit; /* Remove this override */
+  font-feature-settings: inherit;
+}
 
   .hero-heading {
     @apply uppercase font-zentry font-black text-4xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[6rem];
@@ -270,10 +281,17 @@ body {
     transform: translateY(66%) scale(0.65);
     opacity: 0.8;
   }
+  
 }
 :root {
   --font-sora: 'Sora', sans-serif;
   --font-grotesk: 'Space Grotesk', sans-serif;
   --font-code: 'Fira Code', monospace;
+}
+@media (max-width: 640px) {
+  .special-font {
+    word-spacing: -0.1em;
+    letter-spacing: -0.01em;
+  }
 }
 

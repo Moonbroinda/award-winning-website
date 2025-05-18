@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import {Timeline} from '../components/Timeline';
+import { experiences } from "../constants";
 
 
 const Web = () => {
@@ -59,6 +61,7 @@ const Web = () => {
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
         ХӨГ<b>Ж</b>ҮҮЛЭГЧ
       </h1>
+      <Timeline data={experiences}/>
     </div>
   );
 };
