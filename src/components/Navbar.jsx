@@ -85,13 +85,24 @@ const NavBar = () => {
 
             {/* Product button only visible on md+ */}
             <Link to="/Holboo" className="hidden md:flex">
-              <Button
-                id="product-button"
-                title="Бүртгүүлэх"
-                // rightIcon={<TiLocationArrow />}
-                containerClass="bg-blue-50 items-center justify-center gap-1"
-              />
-            </Link>
+  <Button
+    id="product-button"
+    title="Бүртгүүлэх"
+    containerClass="
+      bg-gradient-to-r from-indigo-500 to-purple-600 
+      text-white 
+      px-6 py-3 
+      rounded-xl 
+      shadow-lg 
+      transition duration-300 ease-in-out 
+      transform hover:scale-105 
+      hover:from-purple-600 hover:to-indigo-500 
+      hover:shadow-2xl
+      font-semibold
+    "
+  />
+</Link>
+
           </div>
 
           {/* Desktop Navigation Links */}

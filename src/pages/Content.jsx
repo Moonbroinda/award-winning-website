@@ -2,6 +2,7 @@
 import { useState } from "react";
 import {Timeline} from '../components/Timeline';
 import { contentCreatorStages } from "../constants";
+import Footer from "../components/Footer";
 
 
 const Content = () => {
@@ -62,6 +63,7 @@ const Content = () => {
         БҮТЭЭГЧ 
       </h1>
       <Timeline data={contentCreatorStages}/>
+      <Footer/>
     </div>
   );
 };

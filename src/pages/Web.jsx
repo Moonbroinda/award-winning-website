@@ -2,6 +2,7 @@
 import { useState } from "react";
 import {Timeline} from '../components/Timeline';
 import { experiences } from "../constants";
+import Footer from "../components/Footer";
 
 
 const Web = () => {
@@ -62,6 +63,7 @@ const Web = () => {
         ХӨГ<b>Ж</b>ҮҮЛЭГЧ
       </h1>
       <Timeline data={experiences}/>
+      <Footer/>
     </div>
   );
 };

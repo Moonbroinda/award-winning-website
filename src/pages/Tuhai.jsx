@@ -2,6 +2,7 @@ import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/parallaxBackground";
 import { Uhai } from "../components/sections/Uhai"; 
 import { RevealOnScroll } from "../components/RevealOnScroll";
+import Footer from "../components/Footer";
 
 const Tuhai = () => {
   return (
@@ -16,6 +17,7 @@ const Tuhai = () => {
       <section className="bg-black text-white">
         <RevealOnScroll>
           <Uhai />
+          <Footer/>
         </RevealOnScroll>
       </section>
     </div>

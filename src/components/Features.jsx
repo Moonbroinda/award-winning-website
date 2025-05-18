@@ -223,16 +223,25 @@ const Features = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-  <div className="flex size-full flex-col justify-between bg-violet-300 p-4 md:p-5 rounded-xl shadow-md overflow-hidden">
+  <div className="relative flex size-full flex-col justify-between 
+                  rounded-xl p-4 md:p-5 shadow-md overflow-hidden 
+                  bg-gradient-to-br from-violet-400 via-indigo-400 to-blue-400 
+                  transition-all duration-500 hover:from-pink-400 hover:via-yellow-300 hover:to-red-400">
+                  
+    {/* Animated glowing stars (optional) */}
+    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,white_0%,transparent_30%)] opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+
     <h1 className="special-font text-black leading-tight text-[clamp(1.25rem,2.5vw,2.5rem)] px-2 py-1 md:px-3 md:py-2 break-words whitespace-normal">
       <span className="inline-block">
-        <b>X</b>иймэл оюун ухаан<br className="hidden sm:block"/> 
+        <b>X</b>иймэл оюун ухаан<br className="hidden sm:block" /> 
         хосолсон сургалт
       </span>
     </h1>
+
     <TiLocationArrow className="m-3 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 self-end text-black" />
   </div>
 </BentoTilt>
+
 
         <BentoTilt className="bento-tilt_2">
           <video

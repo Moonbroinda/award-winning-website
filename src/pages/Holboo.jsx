@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
-
+import Footer from "../components/Footer";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -54,6 +54,7 @@ const Contact = () => {
   };
 
   return (
+  <>
     <section className="relative flex items-center justify-center py-12 bg-gray-800 text-white">
       <Particles className="absolute inset-0 -z-50" quantity={100} ease={80} color={"#ffffff"} refresh />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
@@ -120,7 +121,12 @@ const Contact = () => {
         </form>
       </div>
     </section>
-  );
+
+    {/* ✅ Footer comes right after the contact section */}
+    <Footer />
+  </>
+);
+
 };
 
 export default Contact;
