@@ -1,7 +1,7 @@
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/ParallaxBackground";
 import { Uhai } from "../components/sections/Uhai"; 
-import { RevealOnScroll } from "../components/RevealOnScroll";
+// import { RevealOnScroll } from "../components/RevealOnScroll";
 import Footer from "../components/Footer";
 
 const Tuhai = () => {
@@ -15,10 +15,10 @@ const Tuhai = () => {
 
       {/* Uhai Section with RevealOnScroll */}
       <section className="bg-black text-white">
-        <RevealOnScroll>
+        {/* <RevealOnScroll> */}
           <Uhai />
           <Footer/>
-        </RevealOnScroll>
+        {/* </RevealOnScroll> */}
       </section>
     </div>
   );
