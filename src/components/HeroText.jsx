@@ -10,7 +10,7 @@ const HeroText = () => {
   };
 
   return (
-    <div className="z-10 mt-20 md:mt-40 flex flex-col md:flex-row justify-between items-start rounded-3xl bg-clip-text">
+    <div className="relative z-10 mt-20 md:mt-40 flex flex-col md:flex-row justify-between items-start rounded-3xl bg-clip-text">
       
       {/* Left Side — Desktop Text */}
       <div className="flex-col hidden md:flex c-space w-1/2 pl-10">
