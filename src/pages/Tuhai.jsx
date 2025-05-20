@@ -1,5 +1,5 @@
 import HeroText from "../components/HeroText";
-import ParallaxBackground from "../components/parallaxBackground";
+import ParallaxBackground from "../components/ParallaxBackground";
 import { Uhai } from "../components/sections/Uhai"; 
 import { RevealOnScroll } from "../components/RevealOnScroll";
 import Footer from "../components/Footer";
