@@ -59,7 +59,7 @@ export const Uhai = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all">
-              <h3 className="text-2xl font-bold mb-4">🏫 Манай мэргэшил</h3>
+              <h3 className="text-2xl font-bold mb-4">🏫 Эзэмших мэргэжил</h3>
               <ul className="list-disc list-inside text-gray-500 space-y-4 mb-5 ">
                 <li className="mb-10"><strong className="text-2xl text-white">Контент бүтээгчийн ур чадварууд</strong> <br/>
                 Бид танд мэргэжлийн түвшний видео зураг авалт (видеографи, кино зураг авалт) 
@@ -75,11 +75,15 @@ export const Uhai = () => {
                 Бид хиймэл оюун ухааны (AI) практик хэрэглээг танилцуулж, 
                 бүтээлч болон техникийн ажилд хэрхэн AI ашиглахыг заадаг.
                 </li>
+                <li><strong className="text-2xl text-white">Дрон технологи</strong> <br/>
+                Дроны үндсэн ойлголт, бүтэц, нислэгийн дадлага ба аюулгүй байдал, агаарын зураглал 
+                ба өгөгдөл цуглуулалт, дрон ашиглалт ба хэрэглээний салбарууд, техникийн үйлчилгээ, угсралт.  
+                </li>
               </ul>
             </div>
 
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">💼 Бидний заадаг сургалт</h3>
+              <h3 className="text-xl font-bold mb-4">💼 Сургалтын үйлчилгээ</h3>
               <div className="space-y-4 text-gray-500">
                 <div>
                   <h4 className="font-semibold text-white text-2xl mb-5">Бүтээлч ур чадварууд</h4>

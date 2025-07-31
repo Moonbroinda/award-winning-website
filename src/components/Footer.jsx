@@ -95,6 +95,8 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <FaPhoneAlt className="text-[#5542ff]" />
               <span>94992204</span>
+              <span>80110727</span>
+              <span>99090161</span>
             </div>
             <div className="flex items-center gap-2">
               <FaInstagram className="text-[#5542ff]" />
