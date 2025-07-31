@@ -21,7 +21,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          <span className="bg-gradient-to-r from-orange-500 via-red-500 to-yellow-400 bg-clip-text text-transparent font-extrabold">
+          <span className="bg-gradient-to-r from-orange-500 from-orange-500 via-red-500 to-yellow-400 bg-clip-text text-transparent font-extrabold">
             Hi, Бид бол Хөгжлийн Цахим Галт Жигүүр
           </span>
         </motion.h1>

@@ -11,6 +11,7 @@ export const Uhai = () => {
           <h2 className="mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-center text-3xl font-bold text-transparent">
             БИДНИЙ ТУХАЙ 
           </h2>
+          <div className="mx-auto max-w-3xl px-4">Мөрөөдлийн гүүр болье </div>
 
           <div className="rounded-xl border border-white/10 p-8 transition-all hover:-translate-y-1">
             <p className="mb-6 text-gray-300">
